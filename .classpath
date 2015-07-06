@@ -18,6 +18,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="lib/acceptance-test/cglib-nodep-2.1_3.jar"/>
 	<classpathentry kind="lib" path="lib/acceptance-test/commons-codec-1.9.jar"/>
 	<classpathentry kind="lib" path="lib/acceptance-test/commons-collections-3.2.1.jar"/>
