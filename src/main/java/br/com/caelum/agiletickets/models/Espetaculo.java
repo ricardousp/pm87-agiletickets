@@ -97,8 +97,13 @@ public class Espetaculo {
      * Repare que a data da primeira sessao é sempre a data inicial.
      */
 	public List<Sessao> criaSessoes(LocalDate inicio, LocalDate fim, LocalTime horario, Periodicidade periodicidade) {
-		// ALUNO: Não apague esse metodo. Esse sim será usado no futuro! ;)
-		return null;
+		
+		Sessao sessao = new Sessao();
+		sessao.setInicio(inicio.toDateTime(horario));
+		
+		sessoes.add(sessao);				
+		
+		return sessoes;
 	}
 	
 	public boolean Vagas(int qtd, int min)
