@@ -6,7 +6,6 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 import org.joda.time.LocalDate;
-import org.joda.time.LocalDateTime;
 import org.joda.time.LocalTime;
 import org.junit.Assert;
 import org.junit.Before;
@@ -38,8 +37,13 @@ public class EspetaculoTest {
 	
 	@Test
 	public void deveInformarAPeriodicidadeSemanal(){
+		
 		LocalDate dataInicio = new LocalDate(2015, 3, 10);
-		LocalDate dataFim = new LocalDate(2015, 3, 10);
+		LocalDate dataFim = new LocalDate(2015, 3, 15);
+		LocalTime horario = new LocalTime(10,0,0);
+		
+		List<Sessao> listaSessoes = espetaculo.criaSessoes(dataInicio, dataFim, horario, Periodicidade.DIARIA);
+		
 	}
 	
 	
