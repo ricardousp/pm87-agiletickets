@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 import org.joda.time.LocalDate;
+import org.joda.time.LocalDateTime;
 import org.joda.time.LocalTime;
 import org.junit.Assert;
 import org.junit.Before;
@@ -26,12 +27,20 @@ public class EspetaculoTest {
 		// Construtor recebe ano, mes e dia
 		LocalDate dataInicio = new LocalDate(2015, 3, 10);
 		LocalDate dataFim = new LocalDate(2015, 3, 10);
-
+		LocalTime horario = new LocalTime(10,0,0);
+		
 		// Hora, Minuto e o Segundo separados por virgula
-		List<Sessao> listaSessoes = espetaculo.criaSessoes(dataInicio, dataFim, new LocalTime(10,0,0), Periodicidade.DIARIA);
+		List<Sessao> listaSessoes = espetaculo.criaSessoes(dataInicio, dataFim, horario, Periodicidade.DIARIA);
 		Assert.assertEquals(1, listaSessoes.size());
+		Assert.assertEquals(dataInicio.toDateTime(horario), listaSessoes.get(0).getInicio());		
 	}	
 	
+	
+	@Test
+	public void deveInformarAPeriodicidadeSemanal(){
+		LocalDate dataInicio = new LocalDate(2015, 3, 10);
+		LocalDate dataFim = new LocalDate(2015, 3, 10);
+	}
 	
 	
 	

@@ -99,8 +99,7 @@ public class Espetaculo {
 	public List<Sessao> criaSessoes(LocalDate inicio, LocalDate fim, LocalTime horario, Periodicidade periodicidade) {
 		
 		Sessao sessao = new Sessao();
-		sessao.setInicio(inicio.toDateTime(horario));
-		
+		sessao.setInicio(inicio.toDateTime(horario));		
 		sessoes.add(sessao);				
 		
 		return sessoes;
